@@ -84,7 +84,7 @@
         }
     }];
 }
-- (void)WZ_fetchAllContact:(WZ_FetchContactCompleteBlock)fetchCompleteBlock
+- (void)WZ_fetchAllContacts:(WZ_FetchContactCompleteBlock)fetchCompleteBlock
 {
     self.fetchCompleteBlock = fetchCompleteBlock;
     [self CheckAddressBookAuthorization:^(bool isAuthorized) {

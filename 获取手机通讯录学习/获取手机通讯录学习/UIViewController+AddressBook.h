@@ -38,5 +38,5 @@ typedef void(^WZ_FetchContactCompleteBlock)(NSMutableArray<WZ_Contact *> *contac
 
  @param fetchCompleteBlock 获取到联系人后的回调
  */
-- (void)WZ_fetchAllContact:(WZ_FetchContactCompleteBlock )fetchCompleteBlock;
+- (void)WZ_fetchAllContacts:(WZ_FetchContactCompleteBlock )fetchCompleteBlock;
 @end

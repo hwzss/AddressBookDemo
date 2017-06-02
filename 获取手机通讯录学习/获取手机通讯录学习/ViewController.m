@@ -25,7 +25,7 @@
     }];
 }
 - (IBAction)fetchAllContactsAction:(id)sender {
-    [self WZ_fetchAllContact:^(NSMutableArray<WZ_Contact *> *contacts) {
+    [self WZ_fetchAllContacts:^(NSMutableArray<WZ_Contact *> *contacts) {
          NSLog(@"%s",__func__);
     }];
 }
