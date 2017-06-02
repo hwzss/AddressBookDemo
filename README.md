@@ -15,5 +15,7 @@
         //获取到的联系人数组
     }];
 ```
+
+#以下是大致分类原理介绍
 ![孤独的介绍demo.png](https://github.com/hwzss/AddressBookDemo/blob/master/UIViewController+AddressBook.png?raw=true)
 
