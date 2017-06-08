@@ -15,7 +15,7 @@
 #import <ContactsUI/ContactsUI.h>
 #import <Contacts/Contacts.h>
 
-#define Is_up_Ios_9 ([[UIDevice currentDevice].systemVersion floatValue] < 9.0)
+#define Is_up_Ios_9 ([[UIDevice currentDevice].systemVersion floatValue] >= 9.0)
 
 #define Is_Ios_8 ([[UIDevice currentDevice].systemVersion floatValue] == 8.0)
 
@@ -318,7 +318,7 @@
         Safe_ReleaseCFType((__bridge CFTypeRef)(phone));
     }
     Safe_ReleaseCFType(phones);
-    Safe_ReleaseCFType(people);
+//    Safe_ReleaseCFType(people);people方法内部并没有retain不应该relase。
     [self dismissViewControllerAnimated:YES
                              completion:^{
                                  if ([self WZ_selectPersonBlock])
