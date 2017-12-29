@@ -126,7 +126,17 @@
                                                      NSString *phone = [self clearPhone:number.stringValue];
                                                      [phoneArr addObject:phone];
                                                  }
-                                                 WZ_Contact *model = [WZ_Contact WZ_ContactWithName:[NSString stringWithFormat:@"%@%@", NO_NULL_Str(contact.givenName), NO_NULL_Str(contact.familyName)] PhoneNumbers:phoneArr.copy];
+                                           
+                                                 NSString *givenName =@"";
+                                                 NSString *familyName =@"";
+                                                 NSSet *availableKeys =[contact valueForKey:@"availableKeys"];
+                                                 if (availableKeys&&[availableKeys containsObject:@"givenName"]) {
+                                                     givenName = contact.givenName;
+                                                 }
+                                                 if (availableKeys&&[availableKeys containsObject:@"familyName"]) {
+                                                     givenName = contact.familyName;
+                                                 }
+                                                 WZ_Contact *model = [WZ_Contact WZ_ContactWithName:[NSString stringWithFormat:@"%@%@", givenName, familyName] PhoneNumbers:phoneArr.copy];
                                                  [contacts addObject:model];
                                              }];
     }
